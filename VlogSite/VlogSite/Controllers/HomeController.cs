@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using VlogSite.Models;
+using VlogSite.Repository;
 
 namespace VlogSite.Controllers
 {
     public class HomeController : Controller
     {
+     
+        IRepository<UserTbl> userRep = new UserRepo ();
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -28,14 +32,12 @@ namespace VlogSite.Controllers
             return View();
         }
 
- 
-
-
-
-
-
-
-
+        [HttpPost]
+        public ActionResult Register(UserTbl usr)
+        {
+                userRep.Insert(usr);
+                return RedirectToAction("Login");
+        }
 
 
 
