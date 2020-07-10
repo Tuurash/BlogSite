@@ -23,7 +23,7 @@ namespace VlogSite.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Registration()
         {
             return View();
         }
