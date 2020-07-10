@@ -27,6 +27,7 @@ namespace VlogSite.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Register()
         {
             return View();
@@ -35,10 +36,15 @@ namespace VlogSite.Controllers
         [HttpPost]
         public ActionResult Register(UserTbl usr)
         {
-                userRep.Insert(usr);
-                return RedirectToAction("Login");
+            IRepository<UserTbl> userRep = new UserRepo();
+            userRep.Insert(usr);
+            return RedirectToAction("Login");
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
