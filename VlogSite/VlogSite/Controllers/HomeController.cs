@@ -33,19 +33,6 @@ namespace VlogSite.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Register(UserTbl usr)
-        {
-   
-            userRep.Insert(usr);
-            return RedirectToAction("Login");
-        }
 
         public ActionResult Login()
         {
@@ -71,6 +58,7 @@ namespace VlogSite.Controllers
             BlogContext bc = new BlogContext();
 
 
+            //string FileName = UploadFile(usrVm);
             string FileName = "30e9b737-e94a-4778-a827-e046858b174d-avatar.png";
 
             var user = new UserTbl
@@ -105,6 +93,8 @@ namespace VlogSite.Controllers
             }
             return fileName;
         }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

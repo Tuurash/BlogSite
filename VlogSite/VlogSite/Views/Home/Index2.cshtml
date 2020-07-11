@@ -1,65 +1,81 @@
 ﻿@model IEnumerable<VlogSite.Models.UserTbl>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-@{
-    ViewData["Title"] = "Index2";
-}
 
-<h1>Index2</h1>
+</head>
+<body>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.UserId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserEmail)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserPassword)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserAbout)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserPhoto)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserEmail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserPassword)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserAbout)
-            </td>
-            <td>
-                <img src="~/Image/@item.UserPhoto" class="rounded-circle" asp-append-version="true" />
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+
+    <div id="container">
+
+        <div id="header">
+            <br />
+            <h1>Hy!<br> Lets Get to Know <br />Eachother</h1>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">
+                    Sign in!
+                </a>
+                <a class="btn btn-primary btn-lg" asp-action="Register" role="button">
+                    Join US?
+                </a>
+            </p>
+        </div>
+        <div id="sidebar">
+            <br /><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/Index/Image/smile.png" />
+        </div>
+        <div class="clear"></div>
+
+        <div id="main">
+            <h2> Great People With their thought,</h2>
+
+            @foreach (var item in Model)
+            {
+
+                <!-- BEGIN CARD -->
+
+                <div class="row">
+
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                        <div class="card">
+                            <img class="card-img-top" src="~/Image/@item.UserPhoto" asp-append-version="true">
+                            <div class="card-block">
+                                <figure class="profile">
+                                    <img src="~/Image/@item.UserPhoto" class="profile-avatar" alt="" asp-append-version="true">
+                                </figure>
+                                <h4 class="card-title mt-3">@Html.DisplayFor(modelItem => item.UserName)</h4>
+                                <div class="meta">
+                                    <a>@Html.DisplayFor(modelItem => item.UserEmail)</a>
+                                </div>
+                                <div class="card-text">
+                                    @Html.DisplayFor(modelItem => item.UserAbout)
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })</small>
+
+                                <!-- <button class="btn btn-secondary float-right btn-sm" >show</button>   -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- END CARD -->
+
+            }
+
+            <div id="footer">this is footer </div>
+
+        </div>
+    </div>
+    </body>
+</html>
