@@ -419,6 +419,8 @@ C:\Users\MiM\source\repos\VlogSite\VlogSite\bin\Debug\netcoreapp3.1\zh-Hant\Micr
 C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\VlogSite.csproj.CoreCompileInputs.cache
 C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\VlogSite.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\VlogSite.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
+C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register2.cshtml.g.cs
+C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index2.cshtml.g.cs

@@ -1,13 +1,63 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="/Index/style.css"/>
 </head>
 <body>
 
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
+    
 
-    <div><a asp-action="Register">Register</a></div>
+    <div id="container">
+
+        <div id="header">
+            <br />
+            <h1>Hy!<br> Lets Get to Know <br />Eachother</h1>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">
+                    Sign in!
+                </a>
+                <a class="btn btn-primary btn-lg" asp-action="Register" role="button">
+                    Join US?
+                </a>
+            </p>
+        </div>
+        <div id="sidebar">
+            <br /><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/Index/Image/smile.png" />
+        </div>
+        <div class="clear"></div>
+
+        <div id="main">
+            <h2> Great People With their thought,</h2>
+
+            <!-- BEGIN CARD -->
+
+            <div class="card" data-hover="Add To playlist">
+                <div class="card_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
+
+
+                <div class="card_title">
+                    <p><a href="https://soundcloud.com/barsuk-records/rilo-kiley-science-vs-romance" target="_blank">Science Vs. Romance</a></p>
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- END CARD -->
+
+
+
+        <div id="footer">this is footer </div>
+
+    </div>
 </body>
 </html>

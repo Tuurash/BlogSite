@@ -1,0 +1,172 @@
+body{
+    background-color:#f1f1f1 ;
+    font: Helvetica;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    background: white;
+    width: 100%;
+
+}
+/*navbar  layout*/
+#navbar {
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  height: 60px;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+h1{
+    font-size: 76px;
+}
+#container{
+  background-color: white;
+  width: 80%;
+  margin: 3% auto;
+  top: 30px;
+  position: center;
+  padding: 10px;
+ 
+}
+#header{
+  background-color:white;
+  margin: 0 auto 0 auto;
+  padding: 25px;
+  float: left;
+  width: 50%;
+}
+#main{
+  top: 30px;
+  background-color: white;
+  width: 97%;
+  padding: 30px;
+}
+
+#sidebar{
+  background-color: white;
+  width: 50%;
+  height: 400px;
+  float: left;
+}
+
+p{
+  margin: 20px; 
+}
+
+.clear {
+	clear: both;
+}
+
+/*card layout*/
+
+body .cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  width: 276px;
+  height: 276px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+
+
+}
+
+.card .h2{
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  width: 100%;
+  color: #7bed9f;
+  font-size:0px;
+  border-radius: 4%;
+  
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -80px;
+  height: 40px;
+
+}
+.cards-list:hover .card{
+  filter:blur(1.9px);
+  
+  transform: scale(0.97);
+  box-shadow: none;
+}
+.cards-list:hover .card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+
+  transform: scale(1);
+  filter: blur(0px);
+  opacity: 1;
+
+
+}
+.cards-list:hover .card:hover .h2{
+  
+  font-size:100px;
+  transition: .6s;
+
+}
+
+
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
