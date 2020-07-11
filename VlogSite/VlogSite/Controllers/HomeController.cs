@@ -28,12 +28,6 @@ namespace VlogSite.Controllers
             WebHostEnvironment = webHostEnvironment;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-
         public ActionResult Login()
         {
             return View();
@@ -95,6 +89,13 @@ namespace VlogSite.Controllers
         }
 
 
+        // UserDetails
+
+        public IActionResult usrDetails(int ID)
+        {
+
+            return View(userRep.Get(ID));
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

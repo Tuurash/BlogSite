@@ -1,0 +1,45 @@
+﻿@model VlogSite.Models.UserTbl
+
+@{
+    ViewData["Title"] = "usrDetails";
+}
+<br /><br /><br /><br />
+
+<h1>usrDetails</h1>
+
+<div>
+    <h4>UserTbl</h4>
+    <hr />
+    <dl class="row">
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserEmail)
+        </dd>
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserAbout)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserAbout)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserPhoto)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="~/Image/@Model.UserPhoto" class="profile-avatar" alt="" asp-append-version="true">
+        </dd>
+    </dl>
+</div>
+<div>
+    
+    <a asp-action="Index2">Home</a>
+</div>
