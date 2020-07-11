@@ -70,8 +70,8 @@ namespace VlogSite.Controllers
         {
             BlogContext bc = new BlogContext();
 
-            
-            string FileName = UploadFile(usrVm);
+
+            string FileName = "30e9b737-e94a-4778-a827-e046858b174d-avatar.png";
 
             var user = new UserTbl
             {
