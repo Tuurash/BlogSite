@@ -17,6 +17,13 @@ namespace VlogSite.Controllers
     {
      
         IRepository<UserTbl> userRep = new UserRepo ();
+        IUserRepo uRepo;
+
+        IRepository<ContactTbl> contactRep = new contactRepo();
+        IcontactRepo cRep;
+
+        IRepository<BlogTbl> blogRep = new blogRepo();
+        IblogRepo bRep;
 
         private readonly ILogger<HomeController> _logger;
 
@@ -90,12 +97,30 @@ namespace VlogSite.Controllers
 
 
         // UserDetails
-
         public IActionResult usrDetails(int ID)
         {
 
             return View(userRep.Get(ID));
         }
+
+        public IActionResult usrDetails2(int ID)
+        {
+            userDetailviewModel usrD = new userDetailviewModel();
+
+            var contact = cRep.userContact(ID);
+            var blog = bRep.userBlogs(ID);
+            var user = userRep.Get(ID);
+
+            usrD.userDtail = user;
+            usrD.userBlogs = blog;
+            usrD.userContact = contact;
+
+            return View(usrD);
+
+        }
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
