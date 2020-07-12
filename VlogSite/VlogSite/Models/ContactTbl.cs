@@ -10,5 +10,7 @@ namespace VlogSite.Models
         public string Email { get; set; }
         public string WebsiteUrl { get; set; }
         public int UserId { get; set; }
+
+        public virtual UserTbl User { get; set; }
     }
 }

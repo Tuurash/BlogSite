@@ -35,9 +35,7 @@ namespace VlogSite.Models
 
                 entity.ToTable("blogTBL");
 
-                entity.Property(e => e.BlogId)
-                    .HasColumnName("blogID")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.BlogId).HasColumnName("blogID");
 
                 entity.Property(e => e.BlogBody)
                     .HasColumnName("blogBody")
@@ -54,6 +52,12 @@ namespace VlogSite.Models
                     .HasMaxLength(3000);
 
                 entity.Property(e => e.UserId).HasColumnName("userID");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.BlogTbl)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_blogTBL_userTBL");
             });
 
             modelBuilder.Entity<ContactTbl>(entity =>
@@ -62,9 +66,7 @@ namespace VlogSite.Models
 
                 entity.ToTable("contactTBL");
 
-                entity.Property(e => e.ContactId)
-                    .HasColumnName("contactID")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.ContactId).HasColumnName("contactID");
 
                 entity.Property(e => e.Email)
                     .IsRequired()
@@ -78,6 +80,12 @@ namespace VlogSite.Models
                 entity.Property(e => e.WebsiteUrl)
                     .HasColumnName("websiteUrl")
                     .HasMaxLength(100);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.ContactTbl)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_contactTBL_userTBL");
             });
 
             modelBuilder.Entity<UserTbl>(entity =>

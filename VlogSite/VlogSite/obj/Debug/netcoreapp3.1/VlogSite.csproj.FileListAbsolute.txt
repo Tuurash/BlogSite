@@ -423,3 +423,4 @@ C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\Razor\Views\
 C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register2.cshtml.g.cs
 C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index2.cshtml.g.cs
 C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\usrDetails.cshtml.g.cs
+C:\Users\MiM\source\repos\VlogSite\VlogSite\obj\Debug\netcoreapp3.1\Razor\Views\Home\usrDetails2.cshtml.g.cs

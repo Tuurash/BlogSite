@@ -10,5 +10,7 @@ namespace VlogSite.Models
         public string BlogBody { get; set; }
         public string BlogPhoto { get; set; }
         public int UserId { get; set; }
+
+        public virtual UserTbl User { get; set; }
     }
 }
