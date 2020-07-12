@@ -1,0 +1,3 @@
+Scaffold-DbContext "Server=DESKTOP-G09H2OK\SQLEXPRESS;Initial Catalog=Blog;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
+
+Data Source=DESKTOP-G09H2OK\SQLEXPRESS;Initial Catalog=Blog;Integrated Security=True
