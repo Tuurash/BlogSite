@@ -33,6 +33,15 @@ namespace VlogSite.Controllers
         {
             _logger = logger;
             WebHostEnvironment = webHostEnvironment;
+
+            this.userRep = new UserRepo();
+            this.uRepo = new UserRepo();
+
+            this.contactRep = new contactRepo();
+            this.cRep = new contactRepo();
+
+            this.blogRep = new blogRepo();
+            this.bRep = new blogRepo();
         }
 
         public ActionResult Login()

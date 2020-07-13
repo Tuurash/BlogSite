@@ -1,29 +1,118 @@
-﻿@model IEnumerable<VlogSite.Models.ViewModel.userDetailviewModel>
+﻿@model VlogSite.Models.ViewModel.userDetailviewModel
 
-@{
-    ViewData["Title"] = "usrDetails2";
-}
+    <!DOCTYPE html>
+    <html lang="en">
 
-<h1>usrDetails2</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/UserView/style2.css" />
+
+
+    </head>
+
+    <body>
+
+
+
+        <div id="container">
+
+            <!-- Heading -->
+            <div id="header">
+                <br><br><br><br>
+                <h2>Welcome!</h2><br><H1>@Html.DisplayFor(model => model.userDtail.UserName)</H1>
+                <p class="lead">
+                    <br>
+                    <blockquote class="blockquote">
+                <p class="mb-0">@Html.DisplayFor(model => model.userDtail.UserAbout)</p>
+                </blockquote>
+                <br><br><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <button type="submit" class="btn btn-info"><img src="https://img.icons8.com/color/40/000000/pencil-tip.png" />Change User Info</button>
+
+            </div>
+
+            <!-- Sidebar -->
+            <br>
+            <div id="sidebar">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a></a>
+                        <img src="~/Image/@Model.userDtail.UserPhoto)" class="image profile-avatar" alt="" asp-append-version="true">
+                        <button type="button" class="btn btn-info"><img src="https://img.icons8.com/material-two-tone/30/000000/change--v2.png" /> CHANGE</button>
+                    </li>
+                </ul>
+                <p class="lead">
+
+                    <h5>Contact</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="badge badge-primary badge-pill">Website</span>
+                            asdasdasd
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                            <span class="badge badge-primary badge-pill">Likedin</span>
+                            Dapibus ac facilisis in
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span class="badge badge-primary badge-pill">Mail</span>
+                            Morbi leo risus
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a></a>
+                            <button type="button" class="btn btn-info"><img src="https://img.icons8.com/color/20/000000/horizontal-settings-mixer.png" /> Change </button>
+                        </li>
+
+                    </ul>
+                </p>
+
+            </div>
+            <div class="clear"></div>
+
+            <div id="main">
+
+                <br><br><br>
+                <h2> Your Blogs</h2>
+                <!-- CARDList -->
+                <div class="cards-list">
+                    <!-- BEGIN CARD -->
+
+                    <div class="card" data-hover="Add To playlist">
+                        <div class="card_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
+
+
+                        <div class="card_title">
+                            <p>
+                                <a href="https://soundcloud.com/barsuk-records/rilo-kiley-science-vs-romance" target="_blank">
+                                    Science Vs.
+                                    Romance
+                                </a>
+                            </p><br><br>
+                            <p>Date</p>
+                        </div>
+
+                    </div>
+                    <!-- END CARD -->
+                </div>
+                <!-- End List -->
+
+                <div id="footer">this is footer </div>
+
+            </div>
+    </body>
+
+</html>
