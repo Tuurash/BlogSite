@@ -61,16 +61,16 @@
                     <ul class="list-group">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <span class="badge badge-primary badge-pill">Website</span>
-                            asdasdasd
+                            @Html.DisplayFor(model => model.userContact.WebsiteUrl)
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
 
                             <span class="badge badge-primary badge-pill">Likedin</span>
-                            Dapibus ac facilisis in
+                            @Html.DisplayFor(model => model.userContact.LinkedinUrl)
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <span class="badge badge-primary badge-pill">Mail</span>
-                            Morbi leo risus
+                            @Html.DisplayFor(model => model.userContact.Email)
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <a></a>
@@ -89,25 +89,28 @@
                 <h2> Your Blogs</h2>
                 <!-- CARDList -->
                 <div class="cards-list">
-                    <!-- BEGIN CARD -->
+                    @foreach (var item in Model.userBlogs)
+                    {
 
-                    <div class="card" data-hover="Add To playlist">
-                        <div class="card_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
+                        <!-- BEGIN CARD -->
+
+                        <div class="card" data-hover="Add To playlist">
+                            <div class="card_image"> <img class="card-img-top" src="~/Image/@item.BlogPhoto" asp-append-version="true"> </div>
 
 
-                        <div class="card_title">
-                            <p>
-                                <a href="https://soundcloud.com/barsuk-records/rilo-kiley-science-vs-romance" target="_blank">
-                                    Science Vs.
-                                    Romance
-                                </a>
-                            </p><br><br>
-                            <p>Date</p>
+                            <div class="card_title">
+                                <p>
+                                    <a href="https://soundcloud.com/barsuk-records/rilo-kiley-science-vs-romance" target="_blank">
+                                        @Html.DisplayFor(modelItem => item.BlogName)
+                                    </a>
+                                </p><br><br>
+                                    <!-- <p>date</p> -->    
+                            </div>
+
                         </div>
-
+                        <!-- END CARD -->
+                    }
                     </div>
-                    <!-- END CARD -->
-                </div>
                 <!-- End List -->
 
                 <div id="footer">this is footer </div>
