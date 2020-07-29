@@ -1,4 +1,5 @@
 # BlogSite
+My First dotnet core app :) . A platform where users can share there blogs.
 # Database Diagram
 ![](Snaps/1.PNG)<br/>
 # Screenshots<br/>
